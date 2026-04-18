@@ -1,0 +1,20 @@
+{
+  "name": "awesome-cli",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@unocss/preset-wind4": "^66.6.8",
+    "unocss": "^66.6.8",
+    "vitepress": "^1.6.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,53 @@
+import { defineConfig } from 'vitepress'
+import UnoCSS from 'unocss/vite'
+
+export default defineConfig({
+  title: 'Awesome Open Source Tools',
+  description: 'Collection of CLI and TUI tools with their commands and benefits',
+  lang: 'en-US',
+  base: '/awesome-opensource/',
+  vite: {
+    plugins: [UnoCSS()],
+  },
+  themeConfig: {
+    nav: [
+      { text: 'CLI Tools', link: '/cli-tools/' },
+      { text: 'TUI Tools', link: '/tui-tools/' },
+    ],
+    sidebar: {
+      '/cli-tools/': [
+        { text: 'Archive Tools', link: '/cli-tools/archive-tools' },
+        { text: 'Git & GitHub Tools', link: '/cli-tools/git-github-tools' },
+        { text: 'Code Analysis & Search', link: '/cli-tools/code-analysis-search' },
+        { text: 'File Operations', link: '/cli-tools/file-operations' },
+        { text: 'Development Tools', link: '/cli-tools/development-tools' },
+        { text: 'Package Managers', link: '/cli-tools/package-managers' },
+        { text: 'Runtime & Languages', link: '/cli-tools/runtime-languages' },
+        { text: 'Shell & Terminal', link: '/cli-tools/shell-terminal' },
+        { text: 'Text Editors', link: '/cli-tools/text-editors' },
+        { text: 'System Monitoring', link: '/cli-tools/system-monitoring' },
+        { text: 'Benchmarking', link: '/cli-tools/benchmarking' },
+        { text: 'Containerization', link: '/cli-tools/containerization' },
+        { text: 'Configuration Management', link: '/cli-tools/configuration-management' },
+        { text: 'Code Counting', link: '/cli-tools/code-counting' },
+        { text: 'Build Tools', link: '/cli-tools/build-tools' },
+        { text: 'Network Tools', link: '/cli-tools/network-tools' },
+        { text: 'Media Processing', link: '/cli-tools/media-processing' },
+        { text: 'Task Management', link: '/cli-tools/task-management' },
+        { text: 'Misc Tools', link: '/cli-tools/misc-tools' },
+        { text: 'Bun Global Packages', link: '/cli-tools/bun-global-packages' },
+        { text: 'Mise Tools', link: '/cli-tools/mise-tools' },
+      ],
+      '/tui-tools/': [
+        { text: 'System Monitoring', link: '/tui-tools/system-monitoring' },
+        { text: 'File Management', link: '/tui-tools/file-management' },
+        { text: 'Git Tools', link: '/tui-tools/git-tools' },
+        { text: 'Text Editors', link: '/tui-tools/text-editors' },
+        { text: 'Terminal Emulators', link: '/tui-tools/terminal-emulators' },
+        { text: 'Task Management', link: '/tui-tools/task-management' },
+        { text: 'Kubernetes', link: '/tui-tools/kubernetes' },
+        { text: 'Misc', link: '/tui-tools/misc' },
+      ]
+    }
+  }
+})
