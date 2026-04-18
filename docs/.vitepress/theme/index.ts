@@ -3,7 +3,7 @@ import './style.css'
 
 export default {
   extends: DefaultTheme,
-  enhanceApp({ app }) {
+  enhanceApp() {
     // register global components
-  }
+  },
 }

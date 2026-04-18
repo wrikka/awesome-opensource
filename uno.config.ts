@@ -1,23 +1,9 @@
-import { defineConfig, presetWind4, transformerVariantGroup, transformerDirectives, transformerCompileClass, presetUno } from 'unocss'
+import {defineConfig, presetUno, transformerDirectives, transformerVariantGroup} from 'unocss'
 
 export default defineConfig({
-  presets: [
-    presetUno(),
-    presetWind4({
-      preflights: {
-        reset: true,
-      },
-    }),
-  ],
-  transformers: [
-    transformerVariantGroup(),
-    transformerDirectives(),
-    transformerCompileClass(),
-  ],
+  presets: [presetUno()],
+  transformers: [transformerVariantGroup(), transformerDirectives()],
   content: {
-    filesystem: [
-      './docs/**/*.{html,md,vue}',
-      './.vitepress/**/*.{html,md,vue}'
-    ],
+    filesystem: ['./docs/**/*.{html,md,vue}', './.vitepress/**/*.{html,md,vue}'],
   },
 })

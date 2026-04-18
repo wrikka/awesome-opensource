@@ -1,20 +1,29 @@
 {
-  "name": "awesome-cli",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
-  },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "@unocss/preset-wind4": "^66.6.8",
-    "unocss": "^66.6.8",
-    "vitepress": "^1.6.4"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  }
+	"name": "awesome-cli",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "vitepress dev docs",
+		"build": "vitepress build docs",
+		"build:watch": "vitepress build docs --watch",
+		"preview": "vitepress preview docs",
+		"typecheck": "tsc --noEmit",
+		"format": "biome check --write .",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write .",
+		"verify": "bun run build && bun run lint",
+		"ci": "bun run verify"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.12",
+		"@types/bun": "latest",
+		"shiki": "^4.0.2",
+		"typescript": "^6.0.3",
+		"unocss": "^66.6.8",
+		"vitepress": "^1.6.4"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	}
 }
